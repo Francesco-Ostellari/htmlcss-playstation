@@ -3,3 +3,28 @@ body {
   font-size: 100%;
 }
 
+.header_top {
+  background-color: black;
+  padding: 5px;
+}
+
+.header_top img {
+  width: 5%;
+}
+
+.navbar .arrow {
+  width: 20px;;
+  padding: 5px;
+} 
+
+form img {
+  width: 20px;
+}
+
+.dropdown-menu img {
+  width: 10%;
+}
+
+.dropdown-menu .text {
+  width: 50px;
+}
