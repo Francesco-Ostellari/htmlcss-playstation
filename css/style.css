@@ -72,6 +72,42 @@ p {
 .container_jumbo h1 {
   margin: 30px 0;
 }
+
 .container_jumbo img {
   width: 50%;
+}
+
+.jumbo-bottom {
+  padding: 20px 30px;
+}
+
+.jumbo-bottom .bordo .bordo-img {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid #378FDB;
+  padding: 5px;
+}
+
+.jumbo-bottom .col img{
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid white;
+  padding: 5px;
+}
+
+/* /layout jumbo */
+
+/* layout playstation5 */
+
+.playstation5 .motto {
+  text-transform: uppercase;
+  color: #378FDB;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.playstation5 h3 {
+  margin-top: 20px;
+  color: #727272;
+  font-weight: 400;
 }
