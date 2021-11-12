@@ -25,15 +25,23 @@ form img {
   width: 60%;
 }
 
-.dropdown-menu .text {
-  width: 50px;
-}
-
-.dropdown-menu .playstation {
+.dropdown-menu .playstation a {
   list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 .dropdown-menu .playstation>li {
   display: inline-block;
 }
 
+.link_col>li {
+  margin: 0 30px;
+  list-style-type: disc;
+  color: #378FDB;
+}
+
+.link_col a {
+  text-decoration: none;
+  color: black;
+}
