@@ -22,9 +22,18 @@ form img {
 }
 
 .dropdown-menu img {
-  width: 10%;
+  width: 60%;
 }
 
 .dropdown-menu .text {
   width: 50px;
 }
+
+.dropdown-menu .playstation {
+  list-style: none;
+}
+
+.dropdown-menu .playstation>li {
+  display: inline-block;
+}
+
