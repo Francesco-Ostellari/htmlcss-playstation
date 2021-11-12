@@ -45,3 +45,33 @@ form img {
   text-decoration: none;
   color: black;
 }
+
+.jumbo-top {
+  background-image: url('../img/jumbo-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container_jumbo {
+  padding-top: 46em;
+  padding-bottom: 5em;
+}
+
+.container_jumbo .btn {
+  background-color: #CD3E2B;
+  color: white;
+}
+
+.container_jumbo
+h1, 
+p {
+  color: white;
+}
+
+.container_jumbo h1 {
+  margin: 30px 0;
+}
+.container_jumbo img {
+  width: 50%;
+}
