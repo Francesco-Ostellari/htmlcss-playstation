@@ -1,11 +1,32 @@
+/* common */
+:root {
+  --orange_btn: #CD3E2B;
+  --lightblue_text: #378FDB;
+  --grey_arrow: #ACACAC;
+  --lightblue_btn: #0A5FD7;
+  --darkgrey_btn: #1C1F23;
+  --lightgrey_btn: #D9DADC;
+  --bg-grey_ps_plus: #BEBCBB;
+  --grey_text: #727272;
+  --bg_footer: #01439C;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
 body {
   font-family: Helvetica, arial, sans-serif;
   font-size: 100%;
 }
+/* /common */
 
+/* layout header */
 .header_top {
-  background-color: black;
+  background-color: var(--black);
   padding: 5px;
+}
+
+.header_bottom {
+  background-color: var(--white);
 }
 
 .header_top img {
@@ -28,24 +49,65 @@ form img {
 .dropdown-menu .playstation a {
   list-style: none;
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 .dropdown-menu .playstation>li {
   display: inline-block;
 }
 
+.navbar .dropdown-toggle::after {
+  font-family: "Font Awesome 6 Free";
+  content: '\f078';
+  border: 0;
+  font-weight: 900;
+  font-size: 0.8em;
+  color: var(--grey_arrow);
+
+}
+
+.dropdown-toggle.show::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f077";
+  color: var(--lightblue_text);
+}
+
+.navbar-light .navbar-nav .nav-link.colore {
+  color: var(--black);
+}
+
+.navbar-light .navbar-nav .nav-link.colore:active,
+.navbar-light .navbar-nav .nav-link.colore:hover,
+.navbar-light .navbar-nav .nav-link.colore:focus {
+  color: var(--lightblue_text);
+}
+
+.navbar-light .navbar-nav ul.margin_dropdown_menu {
+  border: 0;
+  margin-top: -1px;
+}
+
 .link_col>li {
   margin: 0 30px;
   list-style-type: disc;
-  color: #378FDB;
+  color: var(--lightblue_text);
 }
 
 .link_col a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
+header .btn {
+  outline: 2px solid var(--darkgrey_btn);
+}
+
+header .btn:hover {
+  border: 2px solid var(--white);
+}
+/* /layout header */
+
+/* layout jumbotron */
 .jumbo-top {
   background-image: url('../img/jumbo-bg.png');
   background-size: cover;
@@ -54,22 +116,29 @@ form img {
 }
 
 .container_jumbo {
-  padding-top: 46em;
+  padding-top: 20em;
   padding-bottom: 5em;
 }
 
 .container_jumbo .btn {
-  background-color: #CD3E2B;
-  color: white;
+  background-color: var(--orange_btn);
+  color: var(--white);
+  outline: 2px solid var(--orange_btn);
+}
+
+.container_jumbo .btn:hover {
+  background-color: var(--orange_btn);
+  color: var(--white);
+  border:2px solid var(--black);
 }
 
 .container_jumbo
-h1, 
+h2, 
 p {
-  color: white;
+  color: var(--white);
 }
 
-.container_jumbo h1 {
+.container_jumbo h2 {
   margin: 30px 0;
 }
 
@@ -84,31 +153,339 @@ p {
 .jumbo-bottom .bordo .bordo-img {
   width: 100%;
   border-radius: 20px;
-  border: 3px solid #378FDB;
+  border: 3px solid var(--lightblue_text);
   padding: 5px;
 }
 
 .jumbo-bottom .col img{
   width: 100%;
   border-radius: 20px;
-  border: 3px solid white;
+  border: 3px solid var(--white);
   padding: 5px;
+}
+
+.jumbo-bottom .col:hover .thumb_videogame {
+  transform: translateY(-1em);
+  transition-duration: 1s;
 }
 
 /* /layout jumbo */
 
 /* layout playstation5 */
+.playstation5 {
+  padding-bottom: 5em;
+}
 
 .playstation5 .motto {
   text-transform: uppercase;
-  color: #378FDB;
+  color: var(--lightblue_text);
   font-weight: bold;
   margin-top: 40px;
 }
 
-.playstation5 h3 {
+.playstation5 h5 {
   margin-top: 20px;
-  color: #727272;
+  color: var(--grey_text);
   font-weight: 400;
 }
 
+.playstation5 .btn {
+  margin-top: 20px;
+  outline: 2px solid var(--lightblue_btn);
+}
+
+.playstation5 .btn:hover {
+  margin-top: 20px;
+  border: 2px solid var(--white);
+}
+
+.playstation5 .img_bundle {
+  width: 100%;
+}
+
+.playstation5 .accessori {
+  width: 70%;
+  opacity: 0.3;
+}
+
+.playstation5 .text {
+  opacity: 0.3;
+}
+
+.playstation5 .col_accessori:hover .accessori {
+  opacity: 1;
+}
+
+.playstation5 .col_accessori:hover .text {
+  opacity: 1;
+  color: var(--black);
+}
+
+.col_accessori a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.p_border {
+  margin-bottom: 1.5em;
+}
+
+/* /layout playstation5 */
+
+/* layout videogame */
+
+.videogame {
+  background-image: url('../img/it-takes-two-hero-banner-desktop.jpg');
+  background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.container_videogame {
+  padding-top: 5em;
+  padding-bottom: 25em;
+}
+
+.container_videogame .btn {
+  background-color: var(--orange_btn);
+  color: var(--white);
+  outline: 2px solid var(--orange_btn);
+}
+
+.container_videogame .btn:hover {
+  background-color: var(--orange_btn);
+  color: var(--white);
+  border: 2px solid var(--black);
+}
+
+.container_videogame .btn:hover {
+  background-color: var(--orange_btn);
+  color: var(--white);
+}
+
+.container_videogame
+h2, 
+p {
+  color: var(--white);
+}
+
+.container_videogame img {
+  width: 50%;
+}
+/* /layout videogame */
+
+/* layout nuove uscite */
+
+.nuove_uscite {
+  background-color: #1F1F1F;
+  color: var(--white);
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.nuove_uscite h5 {
+  margin-bottom: 40px;
+}
+
+.nuove_uscite .img_nuove_uscite {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.nuove_uscite .text_nuove_uscite {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* /layout nuove uscite */
+
+/* layout playstation 4 */
+
+.playstation4 {
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+.playstation4 h2 {
+  margin-bottom: 30px;
+}
+
+.playstation4 h5 {
+  margin-top: 20px;
+  color: var(--grey_text) ;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.playstation4 .img_playstation_4 {
+  width: 100%;
+}
+
+.playstation4 .btn {
+  outline: 2px solid var(--lightblue_btn);
+}
+
+.playstation4 .btn:hover {
+  border: 2px solid var(--white);
+}
+/* /layout playstation4 */
+
+/* layout playstationplus */
+
+.playstationplus {
+  background-color: var(--bg-grey_ps_plus);
+}
+
+.playstationplus .ps-plus-logo {
+  width: 70%;
+}
+
+.playstationplus h5 {
+  margin: 40px 0;
+}
+
+.playstationplus .btn {
+  background-color: var(--lightgrey_btn);
+  color: var(--lightblue_text);
+  outline: 2px solid var(--lightgrey_btn);
+}
+
+
+.playstationplus .btn:hover {
+  background-color: var(--lightgrey_btn);
+  color: var(--lightblue_text);
+  border: 2px solid var(--lightblue_text);
+}
+
+.playstationplus .ps-plus-thumb {
+  height: 100%;
+}
+
+/* /layout playstationplus */
+
+/* layout sconti */
+
+.sconti {
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.sconti h2 {
+  margin-bottom: 30px;
+}
+
+.sconti h5 {
+  margin-top: 20px;
+  color: var(--grey_text) ;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.sconti .img_sconti {
+  width: 100%;
+}
+/* /layout sconti */
+
+/* layout playstation_now */
+
+.playstation_now {
+  background-color: #161C3B;
+}
+
+.playstation_now .ps-now-logo {
+  width: 70%;
+}
+
+.playstation_now h5 {
+  margin: 40px 0;
+  color: var(--white);
+}
+
+.playstation_now .btn {
+  background-color: var(--white);
+  color: var(--black);
+  outline: 2px solid var(--white);
+}
+
+
+.playstation_now .btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.playstation_now .ps-now-thumb {
+  height: 100%;
+}
+
+/* /layout playstation_now */
+
+/* layout social */
+
+.footer_top_social {
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.footer_top_social h2 {
+  margin-bottom: 100px;
+}
+
+.footer_top_social .img_social {
+  width: 100%;
+}
+/* /layout social */
+
+/* layout footer */
+
+.footer_bottom {
+  background-color: var(--bg_footer);
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.shared-nav-ps-logo {
+  fill: var(--white);
+  height: 100px;
+}
+
+.footer_bottom .text_footer {
+  color: var(--white);
+}
+
+.footer_bottom span {
+  margin-left: 10px;
+}
+
+.link ul {
+  list-style: none;
+}
+
+.link ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.margin {
+  margin: 0 20px;
+}
+
+.footer_bottom .sie_logo {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer_bottom p {
+  width: 100%;
+}
+
+.footer_bottom p a {
+  color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .margin {
+    margin: 0;
+  }
+}
+
+/* /layout footer */
